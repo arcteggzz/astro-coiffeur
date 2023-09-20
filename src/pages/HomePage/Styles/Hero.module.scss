@@ -9,9 +9,9 @@
   row-gap: pixRem(12);
   height: 100vh;
 
-  // background-image: url("../../../assets/images/hero_header_bg_1.jpg");
-  // background-size: cover;
-  // background-position: center;
+  background-image: url("../images/hero_header_bg_2.jpg");
+  background-size: cover;
+  background-position: center;
 
   @include md() {
     padding: 0 pixRem(72);

@@ -5,6 +5,7 @@ import routePaths from "../../utils/routePaths";
 import { useState } from "react";
 import closeHamburger from "./images/closeHamburger.png";
 import openHanburger from "./images/openHanburger.png";
+import coiffeur_logo from "./images/coffeur_logo.png";
 
 const Navbar = () => {
   const { mobileNavbarOpen, toggleMobileNavbar } = useApp();
@@ -12,9 +13,8 @@ const Navbar = () => {
 
   const navElements = [
     { link: routePaths.HOMEPAGE, name: "Home" },
-    { link: routePaths.GALLERYPAGE, name: "Gallery" },
-    { link: routePaths.LOCATIONPAGE, name: "Location" },
     { link: routePaths.SERVICESPAGE, name: "Services" },
+    { link: routePaths.GALLERYPAGE, name: "Gallery" },
     { link: routePaths.STOREPAGE, name: "Store" },
   ];
 
@@ -34,40 +34,47 @@ const Navbar = () => {
         <div
           className={
             navBarActive
-              ? `${styles.Navbar_container_light} ${styles.Navbar_active}`
-              : styles.Navbar_container_light
+              ? `${styles.Navbar_container} ${styles.Navbar_active}`
+              : styles.Navbar_container
           }
         >
           {/* desktop left hand side */}
-          <Link to={"/"} className={styles.logo_icon}>
-            Something
-          </Link>
+          <div className={styles.left_hand_side}>
+            {/* desktop navlinks  */}
+            {navElements.map((elem) => {
+              return (
+                <NavLink
+                  to={elem.link}
+                  key={elem.name}
+                  className={
+                    navBarActive
+                      ? styles.single_NavLink
+                      : styles.inactive_NavLink
+                  }
+                >
+                  {elem.name}
+                </NavLink>
+              );
+            })}
+          </div>
 
           {/* desktop middle hand side */}
           <Link to={"/"} className={styles.logo_icon}>
-            Something
+            <img src={coiffeur_logo} alt="" />
           </Link>
 
           {/* desktop right hand side */}
-          <div className={styles.desktop_right}>
-            {/* desktop navlinks  */}
-            <div className={styles.navLinks_Desktop}>
-              {navElements.map((elem) => {
-                return (
-                  <NavLink
-                    to={elem.link}
-                    key={elem.name}
-                    className={
-                      navBarActive
-                        ? styles.single_NavLink
-                        : styles.inactive_NavLink
-                    }
-                  >
-                    {elem.name}
-                  </NavLink>
-                );
-              })}
-            </div>
+          <div className={styles.right_hand_side}>
+            <NavLink
+              to={routePaths.LOCATIONPAGE}
+              className={
+                navBarActive ? styles.single_NavLink : styles.inactive_NavLink
+              }
+            >
+              Location
+            </NavLink>
+
+            <button className={styles.book_button}>Book an Appointment</button>
 
             {/* mobile hamburger controller */}
             <button
@@ -84,9 +91,7 @@ const Navbar = () => {
 
         <div
           className={
-            mobileNavbarOpen
-              ? styles.sidebarMobileOpen
-              : styles.Mobile_Nav_Light
+            mobileNavbarOpen ? styles.mobile_nav_open : styles.mobile_nav_closed
           }
         >
           <section className={styles.Navlinks_Mobile}>
@@ -101,15 +106,15 @@ const Navbar = () => {
                 </NavLink>
               );
             })}
+
+            <Link to={routePaths.GALLERYPAGE} className={styles.mobile_NavLink}>
+              Location
+            </Link>
+
+            <button className={styles.book_button_mobile}>
+              Book an Appointment
+            </button>
           </section>
-          <Link
-            to={routePaths.GALLERYPAGE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.cv_button_mobile}
-          >
-            Download Cv
-          </Link>
         </div>
       </nav>
     </>

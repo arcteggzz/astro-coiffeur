@@ -6,29 +6,12 @@
   width: 100%;
   z-index: 1000;
 
-  // .Navbar_container_dark {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   width: 100%;
-  //   padding: 0 pixRem(120);
-  //   height: pixRem(80);
-  //   background-color: $darkModeBackground;
-
-  //   @include md() {
-  //     padding: 0 pixRem(72);
-  //     height: pixRem(68);
-  //   }
-  //   @include sm() {
-  //     padding: 0 pixRem(18);
-  //     height: pixRem(72);
-  //   }
-  // }
-  .Navbar_container_light.Navbar_active {
+  .Navbar_container.Navbar_active {
     background: $lightModeBackground;
+    border: 1px solid #c7c7c7;
   }
 
-  .Navbar_container_light {
+  .Navbar_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +20,7 @@
     height: pixRem(80);
     background: transparent;
     transition: all ease 0.4s;
+    border: none;
 
     @include md() {
       padding: 0 pixRem(72);
@@ -48,15 +32,53 @@
     }
   }
 
+  .left_hand_side {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    @include sm() {
+      display: none;
+    }
+
+    .single_NavLink {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      transition: all ease 0.2s;
+      text-decoration: none;
+      border-bottom: transparent solid 2px;
+    }
+
+    .single_NavLink:hover,
+    .inactive_NavLink:hover {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: none;
+      color: #191919;
+      border-bottom: #191919 solid 2px;
+    }
+
+    .inactive_NavLink {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: none;
+      color: white;
+      border-bottom: transparent solid 2px;
+    }
+  }
+
   .logo_icon {
     img {
-      width: 160px;
+      width: 36px;
       height: auto;
       cursor: pointer;
       transition: all ease 0.5s;
 
       @include sm() {
-        width: 100px;
+        width: 34px;
       }
     }
 
@@ -65,86 +87,75 @@
     }
   }
 
-  .desktop_right {
+  .right_hand_side {
     display: flex;
     align-items: center;
-    gap: pixRem(42);
+    column-gap: pixRem(32);
 
     @include md() {
       gap: pixRem(32);
     }
     @include sm() {
-      gap: pixRem(16);
+      display: block;
     }
 
-    .navLinks_Desktop {
-      display: flex;
-      align-items: center;
-      gap: pixRem(42);
-
-      @include md() {
-        gap: pixRem(32);
-      }
+    .single_NavLink {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      transition: all ease 0.2s;
+      text-decoration: none;
+      border-bottom: transparent solid 2px;
       @include sm() {
         display: none;
       }
+    }
 
-      .single_NavLink {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        transition: all ease 0.2s;
-        text-decoration: none;
-        border-bottom: transparent solid 2px;
-      }
-
-      .single_NavLink:hover,
-      .inactive_NavLink:hover {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        text-decoration: none;
-        color: $tertiary;
-        border-bottom: $tertiary solid 2px;
-      }
-
-      .inactive_NavLink {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        text-decoration: none;
-        color: white;
-        border-bottom: transparent solid 2px;
+    .single_NavLink:hover,
+    .inactive_NavLink:hover {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: none;
+      color: #191919;
+      border-bottom: #191919 solid 2px;
+      @include sm() {
+        display: none;
       }
     }
 
-    .cv_button {
-      padding: 14px 16px;
-      border-radius: 6px;
+    .inactive_NavLink {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 16px;
+      text-decoration: none;
+      color: white;
+      border-bottom: transparent solid 2px;
+      @include sm() {
+        display: none;
+      }
+    }
+
+    .book_button {
+      padding: 14px 16px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
       text-align: center;
       cursor: pointer;
       transition: all ease 0.2s;
       text-decoration: none;
-      background: #0195ff;
-      color: $darkModeFontPrimary;
+      background: #191919;
+      color: #ffffff;
+      border: none;
 
       @include sm() {
         display: none;
       }
     }
 
-    .cv_button:hover {
-      color: white;
-      background-color: #298bd0 !important;
-    }
-
-    .theme_icon {
-      cursor: pointer;
-      border: none;
-      background: none;
+    .book_button:hover {
+      background-color: rgb(62, 63, 64) !important;
     }
 
     .hamburger {
@@ -174,9 +185,8 @@
     }
   }
 
-  .cv_button_mobile {
+  .book_button_mobile {
     padding: 10px 16px;
-    border-radius: 6px;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -184,50 +194,12 @@
     cursor: pointer;
     transition: all ease 0.2s;
     text-decoration: none;
-    background: #298bd0;
-    color: $darkModeFontPrimary;
-  }
-
-  .Mobile_Nav_Dark,
-  .Mobile_Nav_Light {
-    display: none;
-    @include md() {
-      display: none;
-    }
-    @include sm() {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      width: 100%;
-      height: calc(100vh - 60px);
-      row-gap: 28px;
-
-      transition: all ease 1s;
-
-      position: absolute;
-      right: -100vw;
-      top: 72px;
-      opacity: 0.8;
-    }
-  }
-
-  //to set background color based on darkMode
-  .Mobile_Nav_Dark {
-    @include sm() {
-      background-color: $darkModeBackground;
-    }
-  }
-  //to set background color based on lightMode
-  .Mobile_Nav_Light {
-    @include sm() {
-      background-color: $lightModeBackground;
-    }
+    background: #191919;
+    color: #ffffff;
   }
 }
 
-.sidebarMobileOpen {
+.mobile_nav_open {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,4 +216,29 @@
   transition: all ease 1s;
 
   opacity: 1;
+}
+
+.mobile_nav_closed {
+  display: none;
+  @include md() {
+    display: none;
+  }
+  @include sm() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    width: 100%;
+    height: calc(100vh - 60px);
+    row-gap: 28px;
+
+    transition: all ease 1s;
+
+    position: absolute;
+    right: -100vw;
+    top: 72px;
+    opacity: 0.8;
+    background-color: $lightModeBackground;
+  }
 }

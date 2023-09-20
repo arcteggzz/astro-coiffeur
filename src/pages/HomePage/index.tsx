@@ -7,6 +7,9 @@ const HomePage = () => {
     <AnimatedFadeInPage>
       <main className={styles.HomePage}>
         <Hero />
+        <Hero />
+        <Hero />
+        <Hero />
       </main>
     </AnimatedFadeInPage>
   );

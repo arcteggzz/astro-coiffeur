@@ -1,14 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.scss";
-import useApp from "../../hooks/useApp";
 import routePaths from "../../utils/routePaths";
 import { useState } from "react";
 import closeHamburger from "./images/closeHamburger.png";
 import openHanburger from "./images/openHanburger.png";
 import coiffeur_logo from "./images/coffeur_logo.png";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  closeNavbar,
+  openNavbar,
+  selectNavIsOpen,
+} from "../../redux/features/mobileNav/mobileNavSlice";
+import { openbookAppointmentModal } from "../../redux/features/bookAppointmentModal/bookAppointmentModalSlice";
 
 const Navbar = () => {
-  const { mobileNavbarOpen, toggleMobileNavbar } = useApp();
+  const dispatch = useDispatch();
+  const mobileNavIsOpen = useSelector(selectNavIsOpen);
+
   const [navBarActive, setNavbarActive] = useState(false);
 
   const navElements = [
@@ -24,6 +32,10 @@ const Navbar = () => {
     } else {
       setNavbarActive(false);
     }
+  };
+
+  const openBookAppointmentModalHandler = () => {
+    dispatch(openbookAppointmentModal());
   };
 
   window.addEventListener("scroll", changeBackgroundNavbarHandler);
@@ -74,15 +86,24 @@ const Navbar = () => {
               Location
             </NavLink>
 
-            <button className={styles.book_button}>Book an Appointment</button>
+            <button
+              className={styles.book_button}
+              onClick={() => openBookAppointmentModalHandler()}
+            >
+              Book an Appointment
+            </button>
 
             {/* mobile hamburger controller */}
             <button
-              onClick={() => toggleMobileNavbar()}
+              onClick={() =>
+                mobileNavIsOpen
+                  ? dispatch(closeNavbar())
+                  : dispatch(openNavbar())
+              }
               className={styles.hamburger}
             >
               <img
-                src={mobileNavbarOpen ? closeHamburger : openHanburger}
+                src={mobileNavIsOpen ? closeHamburger : openHanburger}
                 alt="Hamburger Menu Button"
               />
             </button>
@@ -91,7 +112,7 @@ const Navbar = () => {
 
         <div
           className={
-            mobileNavbarOpen ? styles.mobile_nav_open : styles.mobile_nav_closed
+            mobileNavIsOpen ? styles.mobile_nav_open : styles.mobile_nav_closed
           }
         >
           <section className={styles.Navlinks_Mobile}>
@@ -111,9 +132,12 @@ const Navbar = () => {
               Location
             </Link>
 
-            <button className={styles.book_button_mobile}>
+            {/* <button
+              className={styles.book_button_mobile}
+              onClick={() => openBookAppointmentModalHandler()}
+            >
               Book an Appointment
-            </button>
+            </button> */}
           </section>
         </div>
       </nav>

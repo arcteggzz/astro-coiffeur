@@ -5,6 +5,7 @@ import { useState } from "react";
 import closeHamburger from "./images/closeHamburger.png";
 import openHanburger from "./images/openHanburger.png";
 import coiffeur_logo from "./images/coffeur_logo.png";
+import coiffeur_logo_white from "./images/coffeur_logo_white.png";
 import { useDispatch, useSelector } from "react-redux";
 import {
   closeNavbar,
@@ -72,7 +73,10 @@ const Navbar = () => {
 
           {/* desktop middle hand side */}
           <Link to={"/"} className={styles.logo_icon}>
-            <img src={coiffeur_logo} alt="" />
+            <img
+              src={navBarActive ? coiffeur_logo : coiffeur_logo_white}
+              alt=""
+            />
           </Link>
 
           {/* desktop right hand side */}

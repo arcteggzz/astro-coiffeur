@@ -1,8 +1,7 @@
 import styles from "./StorePage.module.scss";
 import { AnimatedFadeInPage } from "../../utils";
-import { AllPagesHero } from "../../Components";
+import { AllPagesHero, SingleItemForSale } from "../../Components";
 import store_hero from "./images/hero_store.jpg";
-import { SingleItemForSale } from "../../Components";
 import { itemsForSale } from "./itemsForSale";
 
 const StorePage = () => {

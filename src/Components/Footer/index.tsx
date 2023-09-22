@@ -41,7 +41,12 @@ const Footer = () => {
           Book an appointment
         </button>
 
-        <p className={styles.footer_p_text}>{getYear()}</p>
+        <div>
+          <p className={styles.footer_p_text}>{getYear()}</p>
+          <p className={styles.footer_p_text}>
+            Image search by Nweke Esomchukwu
+          </p>
+        </div>
       </footer>
     </>
   );

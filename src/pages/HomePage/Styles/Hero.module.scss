@@ -6,12 +6,14 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  row-gap: pixRem(12);
+  row-gap: pixRem(82);
   height: 100vh;
 
   background-image: url("../images/hero_header_bg_2.jpg");
   background-size: cover;
   background-position: center;
+
+  transition: all 0.5s ease-in-out;
 
   @include md() {
     padding: 0 pixRem(72);
@@ -19,5 +21,44 @@
   @include sm() {
     row-gap: pixRem(12);
     height: 100vh;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 78px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    @include md() {
+      font-size: 64px;
+      line-height: 66px;
+    }
+    @include sm() {
+      font-size: 32px;
+      line-height: 34px;
+    }
+  }
+
+  .location_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .footer_p_text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      text-align: center;
+      @include md() {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      @include sm() {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
   }
 }

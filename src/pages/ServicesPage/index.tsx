@@ -6,6 +6,8 @@ import {
   hairServicesTwo,
   beautyServicesOne,
   beautyServicesTwo,
+  maleServicesOne,
+  maleServicesTwo,
 } from "./serviceData/serviceData";
 import services_image from "./images/services_image.jpg";
 
@@ -90,6 +92,43 @@ const ServicesPage = () => {
             </div>
             <div className={styles.services_container}>
               {beautyServicesTwo.map((item, index) => {
+                return (
+                  <>
+                    <SingleService
+                      key={index}
+                      cost={item.cost}
+                      name={item.name}
+                    />
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.services_offered_container}>
+          <h2>Male Salon</h2>
+          <p className={styles.offered_p}>
+            Explore our top notch gender tailored services for Males products
+            and hair services.
+          </p>
+
+          <div className={styles.services_parent_container}>
+            <div className={styles.services_container}>
+              {maleServicesOne.map((item, index) => {
+                return (
+                  <>
+                    <SingleService
+                      key={index}
+                      cost={item.cost}
+                      name={item.name}
+                    />
+                  </>
+                );
+              })}
+            </div>
+            <div className={styles.services_container}>
+              {maleServicesTwo.map((item, index) => {
                 return (
                   <>
                     <SingleService

@@ -1,6 +1,6 @@
 import styles from "../Styles/MeetTheTeam.module.scss";
 import imageOne from "../images/teamMemberOne.jpg";
-import imageTwo from "../images/teamMemberTwo.jpg";
+import imageTwo from "../images/teamMemberFour.jpg";
 import imageThree from "../images/teamMemberThree.jpg";
 
 const SingleTeamMember = ({
@@ -26,14 +26,14 @@ const SingleTeamMember = ({
 const MeetTheTeam = () => {
   const teamMembers = [
     {
-      name: "Nene Esom",
-      imageSrc: imageTwo,
-      position: "Stylist",
-    },
-    {
       name: "Lorem Didie",
       imageSrc: imageOne,
       position: "Owner",
+    },
+    {
+      name: "Nene Esom",
+      imageSrc: imageTwo,
+      position: "Stylist",
     },
     {
       name: "Crystal Nomski",

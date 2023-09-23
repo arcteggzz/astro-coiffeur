@@ -1,185 +1,185 @@
 export const hairServicesOne = [
   {
-    name: "One",
-    cost: 450,
+    name: "Relaxing hair",
+    cost: 600,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Straightening hair",
+    cost: 2300,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Parking gel",
+    cost: 1000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Net gel",
+    cost: 800,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Perming hair",
+    cost: 700,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Perming with rollers",
+    cost: 900,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Virgin coils",
+    cost: 1200,
   },
 ];
 
 export const hairServicesTwo = [
   {
-    name: "One",
-    cost: 450,
+    name: "Long braids",
+    cost: 2000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Long twists",
+    cost: 2000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Short braids",
+    cost: 1500,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Short twists",
+    cost: 1400,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Frontals and closures",
+    cost: 3000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Ghana weaving",
+    cost: 2400,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Dying hair",
+    cost: 1200,
   },
 ];
 
 export const beautyServicesOne = [
   {
-    name: "One",
-    cost: 450,
+    name: "Manicure",
+    cost: 5000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Pedicure",
+    cost: 4000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Fixing nails",
+    cost: 3500,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Spa treatment",
+    cost: 10000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Tanning",
+    cost: 7000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Skin decoration",
+    cost: 8000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Skin treatment",
+    cost: 6500,
   },
 ];
 
 export const beautyServicesTwo = [
   {
-    name: "One",
-    cost: 450,
+    name: "Beauty make-up",
+    cost: 5000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Chatacter make-up",
+    cost: 9000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Head gear tying",
+    cost: 4500,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Nail filling",
+    cost: 3000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Face treatment",
+    cost: 6500,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Skin washing",
+    cost: 9500,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Eyebrows",
+    cost: 900,
   },
 ];
 
 export const maleServicesOne = [
   {
-    name: "One",
-    cost: 450,
+    name: "Manicure",
+    cost: 3000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Pedicure",
+    cost: 2000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Low cut",
+    cost: 400,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Dreadlocks",
+    cost: 1800,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Dying hair",
+    cost: 1300,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Beards styling",
+    cost: 1200,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Relaxing hair",
+    cost: 500,
   },
 ];
 
 export const maleServicesTwo = [
   {
-    name: "One",
-    cost: 450,
+    name: "Face treatment",
+    cost: 3400,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Tanning",
+    cost: 7000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Gelling",
+    cost: 700,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Hair treatment",
+    cost: 3000,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Plaiting hair",
+    cost: 2500,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Eyebrows",
+    cost: 400,
   },
   {
-    name: "One",
-    cost: 450,
+    name: "Balding",
+    cost: 650,
   },
 ];

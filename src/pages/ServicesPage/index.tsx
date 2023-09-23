@@ -11,7 +11,13 @@ import {
 } from "./serviceData/serviceData";
 import services_image from "./images/services_image.jpg";
 
-const SingleService = ({ name, cost }: { name: string; cost: number }) => {
+export const SingleService = ({
+  name,
+  cost,
+}: {
+  name: string;
+  cost: number;
+}) => {
   return (
     <>
       <div className={styles.SingleService}>

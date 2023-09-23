@@ -1,0 +1,116 @@
+@use "../../../assets/styles/" as *;
+
+.Location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 100px pixRem(0);
+  background-color: #ffffff;
+  row-gap: 28px;
+
+  @include md() {
+    padding: pixRem(18) pixRem(0);
+  }
+  @include sm() {
+    padding: pixRem(72) pixRem(20);
+  }
+
+  .location_image {
+    width: 360px;
+    height: auto;
+
+    @include sm() {
+      width: 180px;
+    }
+  }
+
+  .location_header {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px;
+    color: #191919;
+    text-align: center;
+  }
+
+  .location_location_container {
+    display: flex;
+    align-items: center;
+
+    @include sm() {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    .location_container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      row-gap: 4px;
+      padding: 28px;
+      @include sm() {
+        align-items: center;
+      }
+    }
+
+    .contact_container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 4px;
+      padding: 28px;
+      @include sm() {
+        align-items: center;
+      }
+    }
+  }
+
+  .location_book_button {
+    padding: 14px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    text-decoration: none;
+    background: #191919;
+    color: #ffffff;
+    border: none;
+
+    @include sm() {
+      padding: 10px 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all ease 0.2s;
+      text-decoration: none;
+      background: #191919;
+      color: #ffffff;
+    }
+  }
+
+  .location_book_button:hover {
+    background-color: rgb(62, 63, 64) !important;
+  }
+
+  .location_link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #191919;
+    border-bottom: #191919 solid 1px;
+  }
+}
+
+.location_p_text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #191919;
+  text-align: center;
+}

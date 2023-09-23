@@ -1,10 +1,10 @@
 import styles from "./Footer.module.scss";
 import footer_image from "./images/footer_image.png";
-import { useDispatch } from "react-redux";
-import { openbookAppointmentModal } from "../../redux/features/bookAppointmentModal/bookAppointmentModalSlice";
+// import { useDispatch } from "react-redux";
+// import { openbookAppointmentModal } from "../../redux/features/bookAppointmentModal/bookAppointmentModalSlice";
 
 const Footer = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const getYear = () => {
     const currentDate = new Date();
@@ -12,9 +12,9 @@ const Footer = () => {
     return `© ${currentYear} Oghenetega Esedere. All rights reserved.`;
   };
 
-  const openBookAppointmentModalHandler = () => {
-    dispatch(openbookAppointmentModal());
-  };
+  // const openBookAppointmentModalHandler = () => {
+  //   dispatch(openbookAppointmentModal());
+  // };
 
   return (
     <>
@@ -34,18 +34,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <button
+        {/* <button
           className={styles.footer_book_button}
           onClick={() => openBookAppointmentModalHandler()}
         >
           Book an appointment
-        </button>
+        </button> */}
 
         <div>
           <p className={styles.footer_p_text}>{getYear()}</p>
           <p className={styles.footer_p_text}>
             Image search by Nweke Esomchukwu
           </p>
+          <p className={styles.footer_p_text}>Logo by Esedere Onajite</p>
         </div>
       </footer>
     </>

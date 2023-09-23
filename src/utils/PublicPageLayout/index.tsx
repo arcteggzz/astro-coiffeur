@@ -14,8 +14,6 @@ const PublicPageLayout = () => {
     selectbookAppointmentModalIsOpen
   );
 
-  console.log(bookAppointmentModalIsOpen);
-
   useEffect(() => {
     dispatch(closeNavbar());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,6 +23,21 @@ const PublicPageLayout = () => {
     dispatch(closeNavbar());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (bookAppointmentModalIsOpen) {
+      document.body.style.position = "fixed";
+    } else {
+      const scrollY = parseInt(document.body.style.top || "0", 10);
+
+      // Reset the body's styles to re-enable scrolling
+      document.body.style.position = "";
+      document.body.style.top = "";
+
+      // Scroll to the previous position
+      window.scrollTo(0, scrollY);
+    }
+  }, [bookAppointmentModalIsOpen]);
 
   return (
     <>

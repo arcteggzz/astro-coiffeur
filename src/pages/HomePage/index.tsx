@@ -1,15 +1,22 @@
 import styles from "./HomePage.module.scss";
 import { AnimatedFadeInPage } from "../../utils";
-import { Hero } from "./Components";
+import {
+  Hero,
+  Location,
+  WallOfLove,
+  MeetTheTeam,
+  Services,
+} from "./Components";
 
 const HomePage = () => {
   return (
     <AnimatedFadeInPage>
       <main className={styles.HomePage}>
         <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
+        <Services />
+        <Location />
+        <MeetTheTeam />
+        <WallOfLove />
       </main>
     </AnimatedFadeInPage>
   );

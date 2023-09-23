@@ -1,0 +1,138 @@
+@use "../../../assets/styles/" as *;
+
+.WallOfLove {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  row-gap: pixRem(64);
+  padding: 104px 0;
+  margin: 0 0 220px 0;
+
+  @include sm() {
+    row-gap: pixRem(48);
+    padding: 72px 0;
+    margin: 0 0 40px 0;
+  }
+
+  .WallOfLove_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    width: 100%;
+  }
+
+  .carousel_slider_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 48px;
+
+    .top_carousel,
+    .bottom_carousel {
+      display: flex;
+      width: 200vw;
+
+      animation-name: slide;
+      animation-duration: 120s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      @include sm() {
+        width: 800vw;
+        animation-duration: 180s;
+        animation-name: slide_mobile;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    .bottom_carousel {
+      animation-direction: reverse;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes slide_mobile {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-400vw);
+  }
+}
+
+.single_item_container {
+  width: 25vw;
+  height: 232px;
+  margin: 0 32px 0 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 24px 28px;
+
+  border-radius: 16px;
+
+  @include sm() {
+    width: 100vw;
+  }
+  box-shadow: 1.576036810874939px 3.152073621749878px 47.281105041503906px 0px
+    rgba(41, 44, 124, 0.1) inset;
+
+  h6,
+  p,
+  h5 {
+    color: #000000;
+  }
+
+  .card_top {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    .header_text_container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0;
+      justify-content: center;
+      width: auto;
+
+      h6 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    width: 100%;
+  }
+}

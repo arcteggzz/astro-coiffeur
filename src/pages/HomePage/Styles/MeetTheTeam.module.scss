@@ -1,0 +1,68 @@
+@use "../../../assets/styles/" as *;
+
+.MeetTheTeam {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  align-items: center;
+  width: 100%;
+  padding: 100px 120px;
+  background-color: #191919;
+
+  @include md() {
+    padding: pixRem(18) pixRem(72);
+  }
+  @include sm() {
+    padding: pixRem(40) pixRem(18);
+    row-gap: 24px;
+  }
+
+  .team_text {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .member_teams_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @include sm() {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+  }
+}
+
+.SingleTeamMember {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 100%;
+  align-items: center;
+
+  .team_member_image {
+    width: 80%;
+    height: auto;
+  }
+
+  .member_name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .member_position {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+    text-align: center;
+  }
+}

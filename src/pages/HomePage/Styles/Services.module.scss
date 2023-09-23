@@ -1,10 +1,28 @@
-@use "../../assets/styles/" as *;
+@use "../../../assets/styles/" as *;
 
-.ServicesPage {
+.Services {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  width: 100%;
+  padding: 100px 120px;
+  background-color: #191919;
+
+  @include md() {
+    padding: pixRem(18) pixRem(72);
+  }
+  @include sm() {
+    padding: pixRem(40) pixRem(18);
+    row-gap: 24px;
+  }
+
+  .services_text {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+  }
 
   .services_offered_container {
     display: flex;
@@ -17,7 +35,7 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 24px;
-      color: #191919;
+      color: #ffffff;
       text-align: center;
     }
 
@@ -25,7 +43,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 20px;
-      color: #191919;
+      color: #ffffff;
       text-align: center;
     }
 
@@ -46,22 +64,13 @@
       }
     }
   }
-}
 
-.SingleService {
-  display: flex;
-  justify-content: space-between;
-  width: 24vw;
-  padding: 16px 0;
-  border-bottom: 1px solid #d5d5d5;
-  @include sm() {
-    width: 80vw;
-  }
-
-  .single_service_p {
+  .services_link {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
-    color: #4e4e4e;
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: #ffffff solid 1px;
   }
 }
